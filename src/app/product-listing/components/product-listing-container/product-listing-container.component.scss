@@ -1,0 +1,9 @@
+@import "/src/styles/init";
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+  background-color: #e4e4e4;
+}

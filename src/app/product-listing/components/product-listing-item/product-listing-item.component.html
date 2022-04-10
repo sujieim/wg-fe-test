@@ -1,0 +1,15 @@
+<div class="product" *ngIf="product">
+  <img src="{{ product.image }}" />
+  <div class="title">{{ product.name }}</div>
+  <div>
+    <div class="price">{{ product.price }}</div>
+    <div>
+      {{ product.rrp }}<span> off RPP of </span
+      >{{ product.price - product.rrp }}
+    </div>
+  </div>
+  <div class="actions">
+    <button class="primary">Add to Cart</button>
+    <button>Compare</button>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<p>product-listing-container works!</p>
+
+<div class="products">
+  <app-product-listing-item
+    *ngFor="let product of products$ | async"
+    [product]="product"
+  ></app-product-listing-item>
+</div>

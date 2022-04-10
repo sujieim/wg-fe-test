@@ -1,0 +1,28 @@
+@import "/src/styles/init"; //TODO
+
+.product {
+  border: 1px solid black;
+  text-align: center;
+
+  .title {
+    height: 80px;
+    margin-top: 12px;
+  }
+
+  .price {
+    font-size: 20px;
+    color: #009e00;
+    font-weight: 800;
+  }
+
+  .actions {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px auto;
+  }
+}
+
+button.primary {
+  background-color: #009e00; //TODO to global var
+}

@@ -1,27 +1,20 @@
-# FeTest
+04-09
+프로젝트 환경 셋팅 완료
+Eslint config
+Prettier config
+Tsconfig- path alliance 설정
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+Routing 설정
+Root child route 적용
+Lazy loading 적용
+Service 개발
+BehaviorSubject 데이터로 mock data 서빙
 
-## Development server
+Component..
+Product-listing-container products$ observable을 async로 property binding ?
+lifecycle에 자동으로 sub/unsub
+Product-listing list 레이아웃 1차
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+​​Tsconfig 에 작성한 path 경로 안먹고 있음
+단순히 observable 을 가져와서 아무런 맵핑 없이 subscribe 하는 형태라면,
+html 에서 | async 형태로 가져다 쓰면 life cycle 따라서 알아서 sub / unsub됨
