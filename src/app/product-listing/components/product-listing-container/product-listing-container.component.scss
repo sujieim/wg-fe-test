@@ -2,8 +2,16 @@
 
 .products {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr;
   justify-items: center;
   background-color: #e4e4e4;
+  margin: 0 auto;
+  grid-gap: 1rem;
+  width: 400px;
+  padding: 1rem;
+
+  @include respond-above(sm) {
+    grid-template-columns: repeat(4, 1fr);
+    width: 1200px;
+  }
 }

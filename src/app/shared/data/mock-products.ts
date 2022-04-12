@@ -1,6 +1,4 @@
-import { Product } from './product';
-
-export const PRODUCTS: Product[] = [
+export const PRODUCTS = [
   {
     sku: '671695659-X',
     name: 'Veal Inside - Provimi',

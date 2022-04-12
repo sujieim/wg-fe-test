@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./styles/normalize";
+@import "./styles/fonts";
 @import "./styles/global";
 @import "./styles/breakpoints";
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

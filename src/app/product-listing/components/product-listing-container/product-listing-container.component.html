@@ -1,8 +1,7 @@
-<p>product-listing-container works!</p>
-
+<h2>products</h2>
 <div class="products">
-  <app-product-listing-item
-    *ngFor="let product of products$ | async"
+  <app-product-listing-tile
+    *ngFor="let product of products$ | async; trackBy: productTrackBy"
     [product]="product"
-  ></app-product-listing-item>
+  ></app-product-listing-tile>
 </div>

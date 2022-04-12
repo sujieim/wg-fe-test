@@ -1,0 +1,19 @@
+<div class="product-detail" *ngIf="product">
+  <div class="image-wrapper">
+    <img class="image" src="{{ product.image }}" />
+  </div>
+  <div class="title">{{ product.name }}</div>
+  <div>
+    <div class="price-wrapper border-top">
+      <div class="price">
+        {{ product.price | currency: "AUD":"symbol-narrow":"0.0-0" }}
+      </div>
+      <div class="sale">
+        {{
+          product.rrp - product.price | currency: "AUD":"symbol-narrow":"0.0-0"
+        }}<span> off RPP of </span
+        >{{ product.rrp | currency: "AUD":"symbol-narrow":"0.0-0" }}
+      </div>
+    </div>
+  </div>
+</div>

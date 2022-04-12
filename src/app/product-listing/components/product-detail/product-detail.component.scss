@@ -1,0 +1,45 @@
+@import "/src/styles/init";
+
+.product-detail {
+  .image-wrapper {
+    box-sizing: border-box;
+  }
+  .image {
+    width: 150px;
+    background-color: #e4e4e4;
+  }
+  .title {
+    color: #6d6d6d;
+    height: 80px;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .price-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.3rem;
+    align-items: center;
+
+    @include respond-above(sm) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  .price {
+    font-size: 1.5rem;
+    color: #009e00;
+    font-weight: 700;
+    @include respond-above(sm) {
+      font-size: 1.1rem;
+      text-align: left;
+    }
+  }
+
+  .sale {
+    color: red;
+    font-size: 12px;
+    @include respond-above(sm) {
+      text-align: right;
+    }
+  }
+}

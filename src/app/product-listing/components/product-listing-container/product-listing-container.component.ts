@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Product } from '@shared/data/product';
-import { ProductListingService } from '@shared/services/product-listing.service';
+import { Product } from '@app/shared/interfaces/product';
+import { ProductListingService } from '@app/product-listing/services/product-listing.service';
 
 @Component({
   selector: 'app-product-listing-container',
@@ -9,7 +9,7 @@ import { ProductListingService } from '@shared/services/product-listing.service'
   styleUrls: ['./product-listing-container.component.scss'],
 })
 export class ProductListingContainerComponent implements OnInit {
-  products$: Observable<Product[]> = of([]); //TODO
+  products$: Observable<Product[]> = of([]);
   constructor(private productListingService: ProductListingService) {}
 
   ngOnInit(): void {
@@ -18,6 +18,9 @@ export class ProductListingContainerComponent implements OnInit {
 
   getProducts(): void {
     this.products$ = this.productListingService.getProducts();
-    //// .subscribe((products) => (this.products = products
+  }
+
+  productTrackBy(index: number, product: Product) {
+    return product.sku;
   }
 }
