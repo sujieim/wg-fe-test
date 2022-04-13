@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<header>
+  <h1>Winnings Angular FE Test</h1>
+  <ul class="navigation">
+    <li>
+      <a class="navigation-link" routerLink="/"> Home </a>
+    </li>
+    <li>
+      <a class="navigation-link" routerLink="/product-listing"> Products </a>
+    </li>
+  </ul>
+</header>
+
+<div class="content">
+  <section><router-outlet></router-outlet></section>
+  <section class="right"><app-cart></app-cart></section>
+</div>

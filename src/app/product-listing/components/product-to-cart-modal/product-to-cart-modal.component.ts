@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from '@app/shared/interfaces/product';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Product } from '@app/shared/interfaces/product';
 
 @Component({
   selector: 'app-product-to-cart-modal',

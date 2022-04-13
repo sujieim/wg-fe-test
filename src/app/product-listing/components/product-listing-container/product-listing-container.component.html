@@ -1,7 +1,7 @@
-<h2>products</h2>
 <div class="products">
   <app-product-listing-tile
     *ngFor="let product of products$ | async; trackBy: productTrackBy"
     [product]="product"
+    (add)="onAdd($event)"
   ></app-product-listing-tile>
 </div>

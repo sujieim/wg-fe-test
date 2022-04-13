@@ -2,7 +2,7 @@
 
 ### Tasks
 
-- [ ] Home Page
+- [x] Home Page
 - [x] Product Listing page
 - [x] products service via HTTP
 
@@ -10,7 +10,7 @@
 
 - [x] Full component Unit Tests
 - [x] Open product details in modal
-- [ ] NgRx
+- [x] NgRx
 
 ---
 
@@ -108,7 +108,9 @@ ngrx
 
 시간이 더 주어졌더라면,
 
-- styles on extra events, :hover..
+- styles on extra events(i.e. :hover), variation class such as horizontal, etc
 - skeleton on loading data
 - pagination
 - refactor using content projection https://angular.io/guide/content-projection
+- ngrx cart + products advanced selector ..
+- different configuration for dev and prod environments

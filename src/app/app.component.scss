@@ -1,0 +1,33 @@
+@import "/src/styles/init";
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  justify-items: stretch;
+  background-color: #555555;
+  text-align: center;
+}
+
+.navigation-link {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include respond-above(sm) {
+    grid-template-columns: 3fr 1fr;
+  }
+}

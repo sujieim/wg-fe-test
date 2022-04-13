@@ -1,0 +1,21 @@
+@import "/src/styles/init";
+
+.wrapper {
+  display: none;
+
+  @include respond-above(sm) {
+    display: block;
+    position: sticky;
+    top: 0;
+    overflow-y: scroll;
+    text-align: center;
+  }
+}
+.title {
+  font-size: 1.2rem;
+}
+.cart-items {
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+  width: 150px;
+}

@@ -21,24 +21,4 @@ describe('ProductListingTileComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  //TODO event test
-  // it('raises the selected event when clicked');
-
-  // it('should', async () => {
-  //   spyOn(component, 'onClick');
-
-  //   const button = fixture.nativeElement.querySelector('.add-to-cart');
-  //   button.click();
-
-  //   fixture.whenStable().then(() => {
-  //     expect(component.onClick).toHaveBeenCalled();
-  //   });
-  // });
-
-  // it('should call onClick method', () => {
-
-  // });
-
-  //addtoclick event
 });

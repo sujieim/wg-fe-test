@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div class="title">cart</div>
+  <div class="cart-items">
+    <app-product-detail
+      *ngFor="let item of items$ | async; trackBy: productTrackBy"
+      [product]="item"
+    ></app-product-detail>
+  </div>
+</div>

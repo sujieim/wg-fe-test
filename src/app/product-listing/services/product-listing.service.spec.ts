@@ -1,9 +1,9 @@
+import { defer } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
 import { ProductListingService } from './product-listing.service';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { HttpClient } from '@angular/common/http';
-import { defer } from 'rxjs';
 
 describe('ProductListingService', () => {
   let service: ProductListingService;
@@ -14,7 +14,7 @@ describe('ProductListingService', () => {
       imports: [HttpClientTestingModule],
       providers: [ProductListingService],
     });
-    // service = TestBed.inject(ProductListingService); TODO
+
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
     service = new ProductListingService(httpClientSpy);
   });

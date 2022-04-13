@@ -3,15 +3,14 @@
 .products {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
-  background-color: #e4e4e4;
-  margin: 0 auto;
   grid-gap: 1rem;
-  width: 400px;
+  justify-items: center;
+
+  margin: 0 auto;
   padding: 1rem;
+  background-color: #e4e4e4;
 
   @include respond-above(sm) {
     grid-template-columns: repeat(4, 1fr);
-    width: 1200px;
   }
 }

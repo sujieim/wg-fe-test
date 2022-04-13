@@ -1,8 +1,9 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ProductListingService } from '@app/product-listing/services/product-listing.service';
 import { of } from 'rxjs';
+import { provideMockStore } from '@ngrx/store/testing';
 
+import { ProductListingService } from '@app/product-listing/services/product-listing.service';
 import { ProductListingContainerComponent } from './product-listing-container.component';
 
 const result = [
@@ -23,6 +24,7 @@ const productListingServiceStub = {
 describe('ProductListingContainerComponent', () => {
   let component: ProductListingContainerComponent;
   let fixture: ComponentFixture<ProductListingContainerComponent>;
+  const initialState = { cart: { items: [] } };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -30,6 +32,7 @@ describe('ProductListingContainerComponent', () => {
       imports: [HttpClientTestingModule],
       providers: [
         { provide: ProductListingService, useValue: productListingServiceStub },
+        provideMockStore({ initialState }),
       ],
     }).compileComponents();
   });
