@@ -3,6 +3,7 @@ import { catchError, Observable } from 'rxjs';
 import { Product } from '@shared/interfaces/product';
 
 import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root',
 })

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Product } from '@app/shared/interfaces/product';
 
@@ -7,10 +7,8 @@ import { Product } from '@app/shared/interfaces/product';
   templateUrl: './product-to-cart-modal.component.html',
   styleUrls: ['./product-to-cart-modal.component.scss'],
 })
-export class ProductToCartModalComponent implements OnInit {
+export class ProductToCartModalComponent {
   @Input() product?: Product;
 
   constructor(public activeModal: NgbActiveModal) {}
-
-  ngOnInit(): void {}
 }

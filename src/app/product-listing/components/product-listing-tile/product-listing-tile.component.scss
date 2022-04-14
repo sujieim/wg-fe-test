@@ -1,8 +1,16 @@
 @import "/src/styles/init";
 
+:host {
+  display: block;
+  width: 100%;
+
+  @include respond-above(md) {
+    width: 240px;
+  }
+}
+
 .product-listing-tile {
   padding: 1.2rem;
-  width: 240px;
   background-color: white;
   font-family: var(--primary-font);
   font-weight: normal;

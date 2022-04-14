@@ -1,4 +1,10 @@
-# Title
+# Winning Group Angular Frontend Engineer Technical Test
+
+> author: Sujie Im
+>
+> submitted date: Apr 14, 2022
+>
+> https://github.com/sujieim/wg-fe-test
 
 ### Tasks
 
@@ -10,18 +16,21 @@
 
 - [x] Full component Unit Tests
 - [x] Open product details in modal
-- [x] NgRx
+- [x] NgRx store for cart state
 
 ---
 
 <br>
 
-## Project Directory
+### Project Directory
 
 ```
 .
 └── src/
     ├── app/
+    │   ├── cart/
+    │   │   ├── components/cart
+    │   │   └── state
     │   ├── pages/
     │   │   ├── home-page
     │   │   └── product-listing-page
@@ -32,85 +41,96 @@
     │   │   │   ├── product-listing-tile
     │   │   │   └── product-to-cart-modal
     │   │   └── services
-    │   └── shared/
-    │       ├── data
-    │       ├── in-memory-data
-    │       └── interfaces
+    │   ├── shared/
+    │   │   ├── data
+    │   │   ├── in-memory-data
+    │   │   └── interfaces
+    │   └── state
     ├── assets/
     │   └── fonts
     ├── environments
     └── styles
 ```
 
+<br/>
+
+### Conventions
+
+- pages are simply flat components showing existing pages with consisting modules
+- observables followed by a '$' <br>
+  https://angular.io/guide/rx-library#naming-conventions-for-observables
+- Action type in form of `[Source] Event`
+
+<br/>
+
 ### Test Cases
 
-ProductDetailComponent
+- [x] ProductDetailComponent :: should bind property product.title
 
-- should bind property product.title
+- [x] ProductListingContainerComponent :: should return expected products from products$
 
-ProductListingContainerComponent
-
-- should return expected prodcuts from products$
-
-ProductListingService
-
-- should return expected products
+- [x] ProductListingService :: should return expected products
 
 <br>
 
-### conventions
-
-https://angular.io/guide/rx-library#naming-conventions-for-observables
-
-page components
-
-#### checkpoints history
+### History
 
 04-09
 
 - Angular project configuration:
-  - eslint config
-  - prettier config
-  - tsconfig (path alliance added)
-- Routing
-  - Root child route 적용
-  - Lazy loading 적용
-- Service 개발
-  - BehaviorSubject 데이터로 mock data 서빙
+  - eslint & prettier config, tsconfig (path alliance added)
+- Routing with lazyloading components <br>
+  https://angular.io/guide/lazy-loading-ngmodules
+- InMemoryDataService serving mock data
+- ProductListingContainer component binding with async pipe <br>
+  https://angular.io/api/common/AsyncPipe#description <br>
+  https://angular.io/guide/property-binding
 
 04-10
 
-- product-listing component
-- product-listing-tile component
-- mobile first media query using breakpoints mixins
-- OpenSans fonts
+- added components: ProductListingComponent, ProductListingTileComponent
+- styles: mobile view using breakpoints mixins
+- OpenSans fonts applied
 
 04-11
 
-- unit test
-- refactor product-detail component for reuse
-- product-to-modal component using @ng-bootstrap
+- unit test cases updated
+- refactor new ProductDetailComponent for reuse
+- ProductToModal component using @ng-bootstrap <br>
+  https://ng-bootstrap.github.io/#/home
 
-04-12
-ngrx
+04-12, 04-13
 
-## TIL
+- ngrx store applied with `{ cart: { items: [] } }` initial state <br>
+  https://ngrx.io/guide/store <br>
+  https://ngrx.io/guide/store-devtools
+- (add) event binding for dispatching Action:`addProduct` <br>
+  https://angular.io/guide/event-binding
+- sample CartComponent
 
-- products$ observable을 async로 property binding ?
-  lifecycle에 자동으로 sub/unsub
-  단순히 observable 을 가져와서 아무런 맵핑 없이 subscribe 하는 형태라면,
-  html 에서 | async 형태로 가져다 쓰면 life cycle 따라서 알아서 sub / unsub됨
+ <br>
 
-- ngFor performance
-  https://angular.io/api/core/TrackByFunction
+---
+
+#### References
+
+- TrackBy function for \*ngFor performance <br>
+  https://angular.io/api/core/TrackByFunction <br>
   https://netbasal.com/angular-2-improve-performance-with-trackby-cc147b5104e5
-  ngFor 관련 성능
+- testing implementations : <br>
+  https://angular.io/guide/testing-components-basics <br>
+  https://angular.io/guide/testing-services
+- sharing data between child and parent <br>
+  https://angular.io/guide/inputs-outputs
 
-시간이 더 주어졌더라면,
+<br>
 
-- styles on extra events(i.e. :hover), variation class such as horizontal, etc
-- skeleton on loading data
+#### Future Implementations
+
+- styles on extra events(i.e. :hover), variation class such as horizontal, mobile view etc.
+- skeleton while loading data
 - pagination
-- refactor using content projection https://angular.io/guide/content-projection
-- ngrx cart + products advanced selector ..
+- refactor using content projection <br>
+  https://angular.io/guide/content-projection
+- ngrx advanced selector combining cart skus and products dictionary
 - different configuration for dev and prod environments
